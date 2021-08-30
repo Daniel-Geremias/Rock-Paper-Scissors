@@ -1,72 +1,14 @@
+<!DOCTYPE html>
+<head>
+    
+    <script type="text/javascript" src="script.js" defer></script>
+
+    <link type="text/css" rel="stylesheet" href="style.css">
+    
+</head>
+
 <body>
-    <script>
+    
+    
 
-        function game() {
-
-            const items = ["rock", "paper", "scissors"]
-
-            let playerScore = 0;
-            let computerScore = 0;
-            
-            for(matchCount = 1; matchCount <= 5; matchCount++){    
-
-                function computerPlay() {
-                    return items[Math.floor(Math.random() * 3)];
-                }
-
-                const computerSelection = computerPlay();
-                console.log("Computer: " + computerSelection);
-
-                const playerSelection = window.prompt("Choose between Rock, Paper and Scissors").toLowerCase();
-                console.log("Player: " + playerSelection);
-
-                function playRound(playerSelection, computerSelection) {
-                    if (
-                        (playerSelection == items[0] && computerSelection == items[2]) ||
-                        (playerSelection == items[1] && computerSelection == items[0]) ||
-                        (playerSelection == items[2] && computerSelection == items[1])
-                        )    
-                        {
-                            playerScore++;
-                            return "Congratulations! You won!";
-                        } else
-                    if (
-                        (playerSelection == items[0] && computerSelection == items[1]) ||
-                        (playerSelection == items[1] && computerSelection == items[2]) ||
-                        (playerSelection == items[2] && computerSelection == items[0])
-                        )
-                        {
-                            computerScore++;
-                            return "Oh no! You lost!";
-                        } else 
-                    if (
-                        (playerSelection == items[0] && computerSelection == items[0]) ||
-                        (playerSelection == items[1] && computerSelection == items[1]) ||
-                        (playerSelection == items[2] && computerSelection == items[2])
-                        )
-                        {
-                            return "Oops! It's a tie!";
-                        }
-                    
-                }
-
-                console.log(playRound(playerSelection, computerSelection));
-
-            }
-
-            if (playerScore > computerScore) {
-                return "Congratulations! You won! \n Score: \n You: " + playerScore + " Computer: " + computerScore;
-            }
-            else if (playerScore < computerScore) {
-                return "Too bad! You lost! \n Score: \n You: " + playerScore + " Computer: " + computerScore;
-            }
-            else {
-                return "Oops! It's a tie \n Score:\n You: " + playerScore + " Computer: " + computerScore;
-            }
-
-        }
-
-        console.log(game());
-
-    </script>
 </body>
