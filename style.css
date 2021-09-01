@@ -1,16 +1,66 @@
+:root {
+    --clr-primary-bg: #202020;
+    --clr-font: #FFF;
 
+    --ff-primary: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    align-items: center;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--clr-primary-bg);
+    color: var(--clr-font);
+    font-family: var(--ff-primary);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+div {
+    text-align: center;
+}
+
+.header {
+    padding: 3rem 0;   
+}
 
 #game {
-    display: flex;
-    align-self: center;
+    display: block;
+    margin: auto;
+    width: 90%;
 }
 
-#score {
-    align-content: center;
+#btn {
+    padding: 20px;
+    margin: 0.5rem;
+    border: 2px solid var(--clr-font);
+    border-radius: 15px;
+    font-size: 8rem;
+    background-color: var(--clr-primary-bg);
+    color: var(--clr-font);
 }
 
-.fa,
-.far,
-.fas {
-    font-size: 100px;
+#reset {
+    padding: 20px;
+    margin: 0.5rem;
+    border: 2px solid var(--clr-font);
+    border-radius: 15px;
+    font-size: 2rem;
+    background-color: var(--clr-primary-bg);
+    color: var(--clr-font);
+}
+
+button:hover,
+#reset:hover {
+    opacity: 60%;
+}
+
+button:active,
+#reset:active {
+    opacity: 30%;
 }
