@@ -8,3 +8,9 @@
 #score {
     align-content: center;
 }
+
+.fa,
+.far,
+.fas {
+    font-size: 100px;
+}
